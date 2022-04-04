@@ -26,7 +26,7 @@ S	40	41	42	43	44	45	46	47	48	49	50	51	52
 */
 ```
 
-1. Construct an array of 2-7 cards using the indexing scheme above. Each card is given a unique index from 1 to 52, Ace-high, with the suits arranged in Bridge order (Clubs, Diamonds, Hearts, Spades)
+1. Construct an array of 2-7 cards using the indexing scheme above. Each card is given a unique index from 1 to 52, Ace-low, with the suits arranged in Bridge order (Clubs, Diamonds, Hearts, Spades)
 1. Pass this array to `analyze(1)`
 1. Your results will vary depending on if your hand size is 2, or larger than 2, as each state has drastically different considerations
 
