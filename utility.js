@@ -235,3 +235,10 @@ const identifyHand = h => {
 	identity.sort((a, b) => b[2] - a[2])
 	return identity
 }
+
+const deal = (n=1) => {
+	// Deals an amount of cards from a virtual deck
+	let deck = range(1,52)
+	if (n > 52 || n <= 0) return false
+	return Array.from({length:n},()=>deck.splice(Math.floor(Math.random()*deck.length-1)+1,1)[0])
+}
