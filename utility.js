@@ -219,3 +219,19 @@ const range = (n,x) => Array.from({length:(x-n)/1+1},(_,i)=>n+(i)).reverse()
 const getPosition = (p,n,x) => ((p-n)*100)/(x-n)
 const arrayEquals = (a,b) => (JSON.stringify(a) === JSON.stringify(b))
 const arrayUnique = a => Array.from(new Set(a))
+
+const identify = (c,ah=!0) => {
+	// [ 0: card_index, 1: suit_index, 2: rank, 3: symbol ]
+	let s = ((c-1) / 13) | 0
+	let r = (c % (13 * (s || 1))) || 13
+	let r2 = (r == 14) ? 1 : r
+	let h = '&#x'+(127136 + (16 * (3-s)) + ((r2 < 12) ? r2 : r+1)).toString(16)+';'
+	return [ c, s, (ah && r == 1) ? 14 : r, h ]
+}
+
+const identifyHand = h => {
+	// Runs identify() for an array of card indexes
+	let identity = h.map(c => identify(c))
+	identity.sort((a, b) => b[2] - a[2])
+	return identity
+}
