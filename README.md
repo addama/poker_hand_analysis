@@ -32,7 +32,7 @@ S	40	41	42	43	44	45	46	47	48	49	50	51	52
 
 ### Sample 2-Card Hand Output
 
-Given hand is `Q5o`, a middling hand
+Given hand is `Q5o`, a middling pre-flop hand
 
 ```
 {
