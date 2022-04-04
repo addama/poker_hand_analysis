@@ -1,6 +1,6 @@
 # Poker Hand Analysis Library
 
-This library is a proof of concept for finding the current and future state of a given poker hand of any size between 2 and 7 cards. Attention has been paid to reducing the number of loops, but there is always room for improvement.
+This library is a proof of concept for finding the current and future state of a given poker hand of any size between 2 and 7 cards, assuming Ace-high Texas Hold-em style poker. Attention has been paid to reducing the number of loops, but there is always room for improvement.
 
 Most of the analysis is fairly straightforward, thanks to some state qualities being mutually exclusive, e.g. if you have a single duplicate, you cannot have a straight or a flush until held cards exceed 5. The bulk of the work went into using bitmasks to find straights in ordered sequences of cards.
 
@@ -215,3 +215,9 @@ Given hand is `AKQJTo`, an Ace-high royal flush
     }
 }
 ```
+
+### Supporting Libraries
+
+`utility.js` provides arrays and tables for indexed strings, such as suit names, hand names, card colors, etc. Simply look up the index in the relevant array.
+
+`test.js` is an informal testing suite that runs several known hands through the algorithm to ensure correct results, as well as running a given number of random hands to determine how quickly the algorithm can produce results on average. Performance timing is provided for all tests run.
