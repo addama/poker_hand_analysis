@@ -32,7 +32,7 @@ S	40	41	42	43	44	45	46	47	48	49	50	51	52
 
 ### Sample 2-Card Hand Output
 
-Given hand is `Q5o`
+Given hand is `Q5o`, a middling hand
 
 ```
 {
@@ -53,8 +53,8 @@ Given hand is `Q5o`
     "potential": {
         "stats": [	// two different statistical analyses
             [
-                140,
-                16.66666666666667
+                140, // index
+                16.66666666666667 // relative position within min-max bounds of this algorithm
             ],
             [
                 88,
@@ -67,22 +67,22 @@ Given hand is `Q5o`
         ],
         "sklansky": {
             "malmuth": [	// Sklansky & Malmuth index
-                9,	// index
-                0	// relative position within min-max bounds of this algorithm
+                9,
+                0	
             ],
             "chubukov": [	// Sklansky & Chubukov index
                 7.5,	// maximum stack size needed to go all-in for this hand
-                1.3223802845121218	// relative position
+                1.3223802845121218
             ]
         }
     },
-    "string": "Q5o"	// commonly used string representation of hand
+    "string": "Q5o"	// common string representation of hand
 }
 ```
 
 ### Sample 5-Card Hand Output
 
-Given hand is `AKQJTo`
+Given hand is `AKQJTo`, an Ace-high royal flush
 
 ```
 {
